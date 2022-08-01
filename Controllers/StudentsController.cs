@@ -58,6 +58,7 @@ public class StudentsController:ControllerBase
     }
     
     [HttpPut]
+    [Route("{Id}")]
     public IActionResult UpdateStudent(StudentDTOs student)
     {
         var studentDTO=StudentDTOs.students.Find(s=>s.Id==student.Id);
